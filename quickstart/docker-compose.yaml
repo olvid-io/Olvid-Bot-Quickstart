@@ -1,0 +1,59 @@
+#######################################################################################################################
+# Base example of a docker-compose file to deploy an Olvid Daemon with a Bot.
+#
+# Please follow this guide to properly set up infrastructure: https://github.com/olvid-io/Olvid-Bot-Quickstart
+# Here is a small memo:
+# start daemon: `docker compose up -d daemon`
+# generate cli admin client key value: `uuidgen`
+# launch cli: `docker compose --rm run cli`
+# run `identity new FirstName LastName` command in cli to create a new identity
+# copy generated client key and set it in bot environment as OLVID_CLIENT_KEY value.
+# move your python code to
+# start bot
+#
+# Then launch cli service with
+#######################################################################################################################
+services:
+  daemon:
+    image: olvid/bot-daemon:latest
+    environment:
+      # TODO set generated admin client key here
+      - OLVID_ADMIN_CLIENT_KEY_CLI=ToSet
+    # expose port if you develop bot locally, else you can comment this
+    ports:
+      - 50051:50051
+    restart: unless-stopped
+    volumes:
+      - ./data:/daemon/data
+      - ./backups:/daemon/backups
+
+  bot:
+    image: olvid/bot-python-runner:latest
+    environment:
+      # TODO to set with client key generated when creating new identity with cli
+      - OLVID_CLIENT_KEY=
+      - DAEMON_HOSTNAME=daemon
+    # we mount bot code as a volume
+    volumes:
+      - ./bot:/app
+    restart: unless-stopped
+    depends_on:
+      - daemon
+
+  cli:
+    image: olvid/bot-python-runner:latest
+    environment:
+      # TODO set generated admin client key here
+      - OLVID_ADMIN_CLIENT_KEY=ToSet
+      - DAEMON_HOSTNAME=daemon
+    stdin_open: true
+    tty: true
+    # to set identity it is more convenient to have a shared volume to put images in and let cli access them
+    volumes:
+      - ./photos:/photos
+    command: ["cmd", "olvid-cli"]
+    depends_on:
+      - daemon
+    # use a profile cause cli only need to start on user initiative
+    profiles:
+      - "cli"
