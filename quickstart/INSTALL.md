@@ -53,7 +53,6 @@ First, install the olvid package:
 pip3 install olvid-bot
 ```
 
-=======
 Then set up the admin client for cli. It's the client key you set previously in daemon environment. You set in as environment variable:
 ```bash
 export OLVID_ADMIN_CLIENT_KEY=generatedKey
