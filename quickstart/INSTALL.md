@@ -53,6 +53,16 @@ First, install the olvid package:
 pip3 install olvid-bot
 ```
 
+=======
+Then set up the admin client for cli. It's the client key you set previously in daemon environment. You set in as environment variable:
+```bash
+export OLVID_ADMIN_CLIENT_KEY=generatedKey
+```
+But we recommend that you write it in a file named `.admin_client_key`:
+```bash
+echo generatedKey > .admin_client_key
+```
+
 Then, run the CLI in interactive mode:
 ```
 olvid-cli
@@ -183,7 +193,7 @@ asyncio.run(main())
 
 Once you edited your code, just kill your previous bot program using `Ctrl + C` and restart it with: `python3 main.py`.
 
-To go further check our other examples [here](link to example dir) or see our Python module documentation [here](link to python client repo).
+To go further check our other [examples](../examples) or see our Python module [documentation](https://github.com/olvid-io/Olvid-Bot-Python-Client).
 
 ### Deploy in production
 
