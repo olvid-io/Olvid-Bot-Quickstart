@@ -78,6 +78,7 @@ asyncio.run(main())
 ### Generate certificates and keys
 Generate our local CA (Certification Authority) using openssl.
 
+(You can leave input default values)
 ```bash
 openssl req -x509 -new -newkey rsa:2048 -nodes -keyout ca.key -out ca.pem \
   -config ca-openssl.cnf -days 36500 -extensions v3_req
@@ -98,7 +99,10 @@ openssl x509 -req -CA ca.pem -CAkey ca.key -CAcreateserial -in server.csr \
 
 Generate client certificate and key
 ```bash
-# generate client certificate (you can leave default value)
+# generate client key
+openssl genpkey -algorithm RSA -pkeyopt rsa_keygen_bits:2048 -out client.key
+
+# generate client certificate request (you can leave default value)
 openssl req -new -key client.key -out client.csr
 # set common name to whatever you want that will identify client
 openssl x509 -req -CA ca.pem -CAkey ca.key -CAcreateserial -in client.csr \
