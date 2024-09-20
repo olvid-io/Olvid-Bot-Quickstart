@@ -226,7 +226,7 @@ services:
       - OLVID_CLIENT_KEY=SetMe
       - DAEMON_HOSTNAME=daemon
     volumes:
-      - ./bot:/app:ro
+      - ./app:/app:ro
     restart: unless-stopped
     depends_on:
       - daemon
