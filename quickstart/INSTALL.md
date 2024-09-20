@@ -254,7 +254,7 @@ When your `docker-compose.yaml` file is ready, generate a client key for the CLI
 
 If it's a new installation, leave the `OLVID_CLIENT_KEY` empty in the bot environment; otherwise, set your bot client key and jump to the next step.
 
-If it's a new installation we will need to create a new identity and set up the daemon. To start CLI use this command: `docker compose run --rm --it cli`. Then you can follow the procedure described here [Prepare Daemon Link] to create a new identity, retrieve your client key and add your new bot in your contacts.
+If it's a new installation we will need to create a new identity and set up the daemon. To start CLI use this command: `docker compose run --rm -it cli`. Then you can follow the procedure described here [Prepare Daemon Link] to create a new identity, retrieve your client key and add your new bot in your contacts.
 Once you have your client key, set it in `OLVID_CLIENT_KEY` for the bot environment.
 
 Before you start your bot, check that you created a directory named `app` and you added your `main.py` and all the code you need inside.
