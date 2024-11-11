@@ -2,7 +2,9 @@
 
 # Introduction
 
-This repository contains the procedures to set up automated tools in Olvid. They could be used to implement a chatbot, an alerting system, or any program interacting with Olvid using our API.
+This repository contains the source code for Olvid Bots documentation available [here](https://bot.doc.olvid.io).
+
+Olvid Bots is a project to develop automated tools in Olvid. This project can be used to implement a chatbots, alerting systems, or any program interacting with Olvid using our API.
 
 Olvid is an open-source private and secure messaging application available for all major platforms (Android, iOS, macOS, Windows, Linux):
 
@@ -11,7 +13,7 @@ Olvid is an open-source private and secure messaging application available for a
 Note that the use of this framework is part of Olvid's paying features. You can use this repository to test and deploy the possibilities offered by this framework, but if you want to use it without limitations, please [contact the Olvid team](https://olvid.io/contact/).
 
 # Terminology
-Here are a few specific terms we will use in this repository.
+Here are a few specific terms we will use in this repository and in our documentation.
 * **Daemon**: a standalone and fully manageable Olvid application exposing gRPC services to control it.
 * **CLI (Command-Line Interface)**: a text-based interface to setup and manually interact with a daemon instance.
 * **Bot/Client**: a program that interacts with a daemon instance, acting as an Olvid user.
@@ -25,23 +27,17 @@ To maximize the versatility of our daemon, we employed the gRPC framework, which
 # Python module
 To make it easier to get you started, we have developed a high-level Python library implementing all the main features offered by the gRPC API. This allows users to focus on their specific use case, without worrying about the intricacies of gRPC services or the Olvid API.
 
-This Olvid Python module provides two main classes: `OlvidClient` and `OlvidBot`. These classes implement all the methods exposed by a daemon, giving you complete control over its capabilities, but they also include additional mechanisms to simplify your code for the most common use cases.
+This Olvid Python module provides a main class: `OlvidClient`. This class implements all the methods exposed by a daemon, giving you complete control over its capabilities, but they also include additional mechanisms to simplify your code for the most common use cases.
 The sources for this Python module can be found in our [Olvid Bot Python Client repository](https://github.com/olvid-io/Olvid-Bot-Python-Client) and the module itself available as a [PyPi module](https://pypi.org/project/olvid-bot/).
 
-Some examples of generic Olvid automation use cases relying on this Python module can be found in our [examples](./examples) directory.
-
-Furthermore, this module includes a Command-Line Interface (CLI) that enables easy setup and manual control of a daemon.
-Its functionality for setting up a daemon is described in our [installation guide](./quickstart/INSTALL.md).
-You can find the complete CLI reference [here](https://github.com/olvid-io/Olvid-Bot-Python-Client)
-
-# Installation
-This project was designed to run in Docker containers. The procedure to deploy and set up docker environment is described in details in this [INSTALL](./quickstart/INSTALL.md) file.
+To start coding with our Python module we recommend our [🚀 Quickstart](https://bot.doc.olvid.io/quickstart) page.
+scribed in details in this [INSTALL](./quickstart/INSTALL.md) file.
 
 # Security Considerations
 When using these products, please be mindful of the following security considerations:
 
-- **Unencrypted Communications**: note that the exchanges between clients and the daemon are currently not encrypted. Please make sure to secure your network communications between the two to avoid unwanted access by third parties.
-- **Cleartext Authentication**: as a consequence of the aforementioned point, the authentication mechanism provided by client keys cannot currently be considered as a valid source of trust. Since the traffic is in plaintext, a malicious client could easily intercept another client's key and impersonate it. Thus, client keys should be viewed as a gatekeeper for controlling only your associated identity, rather than a real security element.
+- **Unencrypted Communications**: note that the exchanges between clients and the daemon are not encrypted unless you [set up TLS](https://bot.doc.olvid.io/configuration.html#setup-tls). Please make sure to secure your network communications between the two to avoid unwanted access by third parties.
+- **Cleartext Authentication**: as a consequence of the aforementioned point, the authentication mechanism provided by client keys cannot be considered as a valid source of trust without TLS enabled. Since the traffic is in plaintext, a malicious client could easily intercept another client's key and impersonate it. Thus, client keys should be viewed as a gatekeeper for controlling only your associated identity, rather than a real security element.
 - **Daemon and client own your exchanges**: the daemon relays and potentially stores all messages addressed to it (directly or within groups). This poses a risk to the confidentiality of your exchanges on Olvid if the daemon and its clients are not deployed in a properly secured environment. However, by design, a daemon does not need to be exposed on the internet if its clients connect directly to it. In most cases, it is possible to hide the daemon behind an extremely restrictive firewall.
 
 # Contributing to Olvid
