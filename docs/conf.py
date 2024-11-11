@@ -65,7 +65,7 @@ if html_theme == "sphinx_book_theme":
 		"show_prev_next": False,
 		###########
 		# repository settings
-		"repository_url": os.getenv("REPOSITORY_URL", "https://github.com/olvid-io/Olvid-Bot-Python-Client"),
+		"repository_url": os.getenv("REPOSITORY_URL", "https://github.com/olvid-io/Olvid-Bot-Quickstart"),
 		"use_repository_button": True,
 		"use_source_button": True,
 		"use_issues_button": True,
