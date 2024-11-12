@@ -2,7 +2,7 @@
 
 # Introduction
 
-This repository contains the source code for Olvid Bots documentation available [here](https://bot.doc.olvid.io).
+This repository contains the source code for Olvid Bots documentation available [here](https://doc.bot.olvid.io).
 
 Olvid Bots is a project to develop automated tools in Olvid. This project can be used to implement a chatbots, alerting systems, or any program interacting with Olvid using our API.
 
@@ -30,13 +30,13 @@ To make it easier to get you started, we have developed a high-level Python libr
 This Olvid Python module provides a main class: `OlvidClient`. This class implements all the methods exposed by a daemon, giving you complete control over its capabilities, but they also include additional mechanisms to simplify your code for the most common use cases.
 The sources for this Python module can be found in our [Olvid Bot Python Client repository](https://github.com/olvid-io/Olvid-Bot-Python-Client) and the module itself available as a [PyPi module](https://pypi.org/project/olvid-bot/).
 
-To start coding with our Python module we recommend our [🚀 Quickstart](https://bot.doc.olvid.io/quickstart) page.
+To start coding with our Python module we recommend our [🚀 Quickstart](https://doc.bot.olvid.io/quickstart) page.
 scribed in details in this [INSTALL](./quickstart/INSTALL.md) file.
 
 # Security Considerations
 When using these products, please be mindful of the following security considerations:
 
-- **Unencrypted Communications**: note that the exchanges between clients and the daemon are not encrypted unless you [set up TLS](https://bot.doc.olvid.io/configuration.html#setup-tls). Please make sure to secure your network communications between the two to avoid unwanted access by third parties.
+- **Unencrypted Communications**: note that the exchanges between clients and the daemon are not encrypted unless you [set up TLS](https://doc.bot.olvid.io/configuration.html#setup-tls). Please make sure to secure your network communications between the two to avoid unwanted access by third parties.
 - **Cleartext Authentication**: as a consequence of the aforementioned point, the authentication mechanism provided by client keys cannot be considered as a valid source of trust without TLS enabled. Since the traffic is in plaintext, a malicious client could easily intercept another client's key and impersonate it. Thus, client keys should be viewed as a gatekeeper for controlling only your associated identity, rather than a real security element.
 - **Daemon and client own your exchanges**: the daemon relays and potentially stores all messages addressed to it (directly or within groups). This poses a risk to the confidentiality of your exchanges on Olvid if the daemon and its clients are not deployed in a properly secured environment. However, by design, a daemon does not need to be exposed on the internet if its clients connect directly to it. In most cases, it is possible to hide the daemon behind an extremely restrictive firewall.
 

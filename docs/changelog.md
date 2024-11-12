@@ -19,14 +19,16 @@ Minor versions will be incremented at least for every changes in [gRPC API descr
 
 ### Changed
 
-- **olvid-client**: replaced DAEMON_HOSTNAME and DAEMON_PORT env variable by DAEMON_TARGET.
-- **olvid-client**: .client_key and .admin_client_key are now deprecated, use .env files instead.
+- **olvid-bot**: replaced DAEMON_HOSTNAME and DAEMON_PORT env variable by DAEMON_TARGET.
+- **olvid-bot**: .client_key and .admin_client_key are now deprecated, use .env files instead.
 - **olvid-bot**: OlvidBot class is now deprecated, use OlvidClient instead (they are equivalent).
 - **docker**: simplified and improved [bot-daemon](https://hub.docker.com/r/olvid/bot-daemon) and [bot-python-runner](https://hub.docker.com/r/olvid/bot-python-runner) image build process. They are now faster to build and lighter.
 
 ### Fixed
 
 - **olvid-bot**: tools.SelfCleaningBot: clean_inbound_messages and clean_outbound_messages parameters were not properly handled
+
+---
 
 ## Version 1.0.0
 

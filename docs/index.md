@@ -5,11 +5,11 @@
 :target: https://olvid.io
 ```
 
-# Olvid Bots
+# Olvid Bots Documentation
 
-Welcome to Olvid Bot's documentation!
+Welcome to the world of Olvid Bots!
 
-This guide is designed to help you easily install and develop your own Olvid Bots.
+This comprehensive guide will walk you through the process of installing and developing your very own customized bots.
 
 ## Glossary
 
@@ -22,13 +22,13 @@ We'll attempt to define them now as clearly as possible.
 
 :::{glossary}
 Daemon
-    A standalone and fully manageable Olvid application exposing gRPC services to control it.
-
-CLI
-    A text-based interface to setup and manually interact with a daemon instance.
+    A standalone and fully manageable Olvid application exposing [gRPC](https://grpc.io) services to control it.
 
 Bot
     Any program interacting as a client with a daemon instance.
+
+CLI
+    A text-based interface to set up and manually interact with a daemon instance.
 
 Identity
     An Olvid profile hosted in a daemon.
@@ -43,7 +43,7 @@ API Key
 
 % todo add identity details to the big global glossary
 
-## Let's start
+## Let's start!
 
 ```{toctree}
 :maxdepth: 2
