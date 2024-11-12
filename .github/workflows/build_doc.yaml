@@ -30,4 +30,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: _build/
           force_orphan: true
-          cname: test.doc.bot.olvid.io
+          cname: doc.bot.olvid.io
