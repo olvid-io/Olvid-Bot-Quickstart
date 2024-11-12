@@ -1,0 +1,628 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>🚀 Quickstart &#8212; 1.1.0.post1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/book-theme.css?v=acad2c9c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=0963413f"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'quickstart';</script>
+    <link rel="icon" href="_static/olvid.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="🤖 Bots" href="bots/bots.html" />
+    <link rel="prev" title="Olvid Bots Documentation" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.1.0.post1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">🚧 Documentation Under Construction! 🚧</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/olvid-bots-horizontal.png" class="logo__image only-light" alt="1.1.0.post1 - Home"/>
+    <img src="_static/olvid-bots-horizontal.png" class="logo__image only-dark pst-js-only" alt="1.1.0.post1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">🚀 Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bots/bots.html">🤖 Bots</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">⚙️ Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-history" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><path d="M0 0h24v24H0z" fill="none"></path><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg> CHANGELOG</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart/blob/main//docs/quickstart.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart/issues/new?title=Issue%20on%20page%20%2Fquickstart.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>🚀 Quickstart</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite">Prerequisite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-daemon">Setup Daemon</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-daemon">Start daemon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-cli">Setup CLI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-cli">Start CLI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-daemon">Initialize daemon</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-bot">Your first bot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-client-key">Setup client key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#echo-bot">Echo bot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="quickstart">
+<h1>🚀 Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading">#</a></h1>
+<section id="prerequisite">
+<h2>Prerequisite<a class="headerlink" href="#prerequisite" title="Link to this heading">#</a></h2>
+<p>In this installation guide we will use Docker and Python3.</p>
+<p>You can install docker <a class="reference external" href="https://docs.docker.com/engine/install/">here</a>.</p>
+<p>We will need at least Python3.10 to use <a class="reference external" href="https://pypi.org/project/olvid-bot/">olvid-bot</a> module.
+If your python install is older you will have to update it.</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>On macOS, we recommend homebrew if you need a newer Python version.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>brew<span class="w"> </span>install<span class="w"> </span>python3
+</pre></div>
+</div>
+</div>
+</section>
+<section id="setup-daemon">
+<h2>Setup Daemon<a class="headerlink" href="#setup-daemon" title="Link to this heading">#</a></h2>
+<section id="start-daemon">
+<h3>Start daemon<a class="headerlink" href="#start-daemon" title="Link to this heading">#</a></h3>
+<p><a class="reference internal" href="index.html#term-Daemon"><span class="xref std std-term">Daemon</span></a> is available as a docker image on <a class="reference external" href="https://hub.docker.com/r/olvid/bot-daemon">Docker Hub</a>.</p>
+<p>Because we want our daemon to persist data we will setup our container using <a class="reference external" href="https://docs.docker.com/compose/">docker compose</a>.</p>
+<p>Here is a minimal <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">daemon</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-daemon</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_ADMIN_CLIENT_KEY_CLI=SetARandomValue</span>
+<span class="w">    </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50051:50051</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/daemon/data</span>
+</pre></div>
+</div>
+<p>It defines a service named daemon, that will run a container from our public <a class="reference external" href="https://hub.docker.com/r/olvid/bot-daemon">daemon image</a>.</p>
+<p>Replace SetARandomValue with a random value.
+This will let daemon start with an admin client key set to the value you pass.
+We will pass the same value to the <a class="reference internal" href="#cli/cli"><code class="xref myst docutils literal notranslate"><span class="pre">cli/cli</span></code></a> to grants admin permissions.
+You can use <code class="docutils literal notranslate"><span class="pre">uuidgen</span></code> bash command to generate a secure random key.</p>
+<p>We also opened the 50051 port (default gRPC port), and mounted a data volume to persist data on host file system.</p>
+<p>Now you can start your daemon in the background.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>daemon
+</pre></div>
+</div>
+<p>To check the daemon logs you can use this command.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>daemon
+</pre></div>
+</div>
+</section>
+<section id="setup-cli">
+<h3>Setup CLI<a class="headerlink" href="#setup-cli" title="Link to this heading">#</a></h3>
+<p>To set up our daemon instance, we’ll use the Olvid Command-Line Interface (CLI), which is embedded in our Python client module, available on <code class="docutils literal notranslate"><span class="pre">pip</span></code>.</p>
+<p>First, install the olvid package:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>olvid-bot
+</pre></div>
+</div>
+<p>Then set up the admin client key for CLI.
+It’s the client key you previously set in daemon environment.</p>
+<p>This admin client key can be passed to CLI using a file or environment.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Use .env file</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Create an .env file.
+Remember to always run your Command-Line Interface (CLI) from the current working directory.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">OLVID_ADMIN_CLIENT_KEY</span><span class="o">=</span>MyAdminClientKey<span class="w"> </span>&gt;<span class="w"> </span>.env
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Use environment</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can also export your admin client key to environment every time you start a shell session.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_ADMIN_CLIENT_KEY</span><span class="o">=</span>MyAdminClientKey
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="start-cli">
+<h3>Start CLI<a class="headerlink" href="#start-cli" title="Link to this heading">#</a></h3>
+<p>Now we can run the CLI in interactive mode.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>olvid-cli
+</pre></div>
+</div>
+<div class="warning admonition">
+<p class="admonition-title">Warning</p>
+<p>If the <code class="docutils literal notranslate"><span class="pre">olvid-cli</span></code> binary is not available, you can start CLI like this:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>olvid-bot
+</pre></div>
+</div>
+</div>
+</section>
+<section id="initialize-daemon">
+<span id="id1"></span><h3>Initialize daemon<a class="headerlink" href="#initialize-daemon" title="Link to this heading">#</a></h3>
+<p>When we set up cli and launched daemon we can start CLI to initialize daemon.</p>
+<p>The aim will be to create a new <a class="reference internal" href="index.html#term-Identity"><span class="xref std std-term">identity</span></a> that our bot will use.
+We will also retrieve a client key to let our bot connect to daemon, and finally we will add bot to our Olvid contacts to exchange with him.</p>
+<p>These three steps can be achieved with just one command: <code class="docutils literal notranslate"><span class="pre">identity</span> <span class="pre">new</span></code>.
+Then you can follow the instructions on the screen.</p>
+<p>Here is a full example with comments. User inputs start with a &gt; and comments with a #.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># We create a new identity. LastName, Position, and Company are optional.</span>
+<span class="c1"># These details can be updated later.</span>
+<span class="m">0</span><span class="w"> </span>&gt;<span class="w"> </span>identity<span class="w"> </span>new<span class="w"> </span>FirstName<span class="w"> </span>LastName<span class="w"> </span>Position<span class="w"> </span>Company
+
+<span class="c1"># A client key to connect using this identity is automatically created;</span>
+<span class="c1"># you must keep it somewhere.</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Here<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span>client<span class="w"> </span>key<span class="w"> </span>to<span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span>daemon<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>identity:
+AAAAAAAA-BBBB-AAAA-AAAA-AAAAAAAAAAAA
+
+<span class="c1"># You can directly add this new identity to your contacts.</span>
+<span class="c1"># This step is optional but necessary if you want to interact with your bot.</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Do<span class="w"> </span>you<span class="w"> </span>want<span class="w"> </span>to<span class="w"> </span>add<span class="w"> </span>this<span class="w"> </span>identity<span class="w"> </span>to<span class="w"> </span>your<span class="w"> </span>contacts<span class="w"> </span>?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span>
+&gt;yes
+
+<span class="c1"># This is an invitation link for this new identity.</span>
+<span class="c1"># You can open it in your browser and scan the QR code with your mobile application.</span>
+<span class="c1"># You can also copy it and import it into your desktop application.</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Send<span class="w"> </span>an<span class="w"> </span>invitation<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>invitation<span class="w"> </span>link:<span class="w"> </span>https://invitation.olvid.io/#........
+
+<span class="c1"># From now, CLI is waiting for a new invitation to arrive ...</span>
+<span class="c1"># When your invitation arrives, the flow continues.</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Please<span class="w"> </span>enter<span class="w"> </span>sas<span class="w"> </span>code<span class="w"> </span>displayed<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>other<span class="w"> </span>device
+
+<span class="c1"># Enter the four-digit code visible on your device.</span>
+&gt;<span class="w"> </span><span class="m">0000</span>
+
+<span class="c1"># Enter the following code in your device</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Please<span class="w"> </span>enter<span class="w"> </span>this<span class="w"> </span>sas<span class="w"> </span>code<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>other<span class="w"> </span>device:<span class="w"> </span><span class="m">1111</span>
+
+<span class="c1"># Flow is now complete</span>
+Now<span class="w"> </span>using<span class="w"> </span>identity:<span class="w"> </span><span class="m">1</span>
+You<span class="w"> </span>can<span class="w"> </span>now<span class="w"> </span>send<span class="w"> </span>messages<span class="w"> </span>to<span class="w"> </span>YOUR<span class="w"> </span>NAME<span class="w"> </span><span class="k">in</span><span class="w"> </span>discussion<span class="w"> </span><span class="m">1</span>
+<span class="m">1</span><span class="w"> </span>&gt;
+</pre></div>
+</div>
+<p>As you can see, the command prompt changed and is now prefixed with a 1 instead of a 0. This is because the CLI is now automatically using this new identity, designated by its ID: 1. Most commands you will run from now will be executed using this identity. For example if you list contacts using the contact get command you will see the contacts of this specific identity.</p>
+<p>A daemon can host more than one identity. In that case, you’ll need to change the identity in use with the identity current command.</p>
+<p>To learn more about the CLI and its commands, see: <a class="reference internal" href="#cli/cli.md"><code class="xref myst docutils literal notranslate"><span class="pre">cli/cli.md</span></code></a>.</p>
+</section>
+</section>
+<section id="your-first-bot">
+<h2>Your first bot<a class="headerlink" href="#your-first-bot" title="Link to this heading">#</a></h2>
+<section id="setup-client-key">
+<h3>Setup client key<a class="headerlink" href="#setup-client-key" title="Link to this heading">#</a></h3>
+<p>To allow your bot to authenticate when connecting to the daemon, it will need the client key that was displayed earlier. If you lost it, you can list registered client keys using the CLI: <code class="docutils literal notranslate"><span class="pre">olvid-cli</span> <span class="pre">key</span> <span class="pre">get</span></code>.</p>
+<p>This client key can be passed to your using environment variables:</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Use .env file</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Create an .env file (or edit your previous .env file).</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="nv">OLVID_CLIENT_KEY</span><span class="o">=</span>MyClientKey<span class="w"> </span>&gt;&gt;<span class="w"> </span>.env
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Use environment</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">You can also export your client key to environment every time you start a shell session.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_CLIENT_KEY</span><span class="o">=</span>MyClientKey
+</pre></div>
+</div>
+</div>
+</details></section>
+<section id="echo-bot">
+<h3>Echo bot<a class="headerlink" href="#echo-bot" title="Link to this heading">#</a></h3>
+<p>Now, let’s write a minimalist bot in Python in a file named <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># we use coroutines to run code asynchronously</span>
+<span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="c1"># elements we need in olvid-bot module</span>
+<span class="kn">from</span> <span class="nn">olvid</span> <span class="kn">import</span> <span class="n">OlvidClient</span><span class="p">,</span> <span class="n">datatypes</span>
+
+<span class="c1"># we write a class extending the OlvidClient base class</span>
+<span class="k">class</span> <span class="nc">MyFirstBot</span><span class="p">(</span><span class="n">OlvidClient</span><span class="p">):</span>
+    <span class="c1"># we override this specific method, called every time our bot receives a message</span>
+    <span class="k">async</span> <span class="k">def</span> <span class="nf">on_message_received</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">message</span><span class="p">:</span> <span class="n">datatypes</span><span class="o">.</span><span class="n">Message</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&gt; </span><span class="si">{</span><span class="n">message</span><span class="o">.</span><span class="n">body</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="c1"># when a message arrives we post another message in this discussion with the same content</span>
+        <span class="k">await</span> <span class="n">message</span><span class="o">.</span><span class="n">reply</span><span class="p">(</span><span class="n">body</span><span class="o">=</span><span class="n">message</span><span class="o">.</span><span class="n">body</span><span class="p">)</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># create the bot</span>
+    <span class="n">bot</span><span class="p">:</span> <span class="n">MyFirstBot</span> <span class="o">=</span> <span class="n">MyFirstBot</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bot is ready!&quot;</span><span class="p">)</span>
+    <span class="c1"># In this case this method wait forever</span>
+    <span class="k">await</span> <span class="n">bot</span><span class="o">.</span><span class="n">wait_for_listeners_end</span><span class="p">()</span>
+
+<span class="c1"># A way to start your program in python asynchronous paradigm</span>
+<span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">())</span>
+<span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>This code requires the [olvid-bot] package, which you previously installed using <em>pip</em>.
+If not, you can install it with:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>pip3<span class="w"> </span>install<span class="w"> </span>olvid-bot
+</pre></div>
+</div>
+<p>To start your bot, simply run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>main.py
+</pre></div>
+</div>
+<p>You will need your daemon to be up and running, and your client key to be set in your environment if that’s the method you chose.</p>
+<p>When your bot has started, you can send it a message from your mobile or your desktop app to check that everything is working properly.</p>
+<p>Here is an example of what your are expecting.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-50 sd-shadow-sm docutils">
+<div class="sd-card-body docutils">
+<img alt="Olvid discussion with your echo bot." class="align-center" src="_images/quickstart-echo-bot-discussion.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Well done, you just created your first Olvid Bot 🤖 !</p>
+</section>
+<section id="next-steps">
+<h3>Next Steps<a class="headerlink" href="#next-steps" title="Link to this heading">#</a></h3>
+<p>You can now check how to write more complex bots in <a class="reference internal" href="bots/bots.html"><span class="std std-doc">🤖 Bots</span></a>.</p>
+<p>If you want to deploy a production ready environment check <a class="reference internal" href="configuration.html"><span class="std std-doc">⚙️ Advanced Configuration</span></a> section to see more advanced deployment use cases.</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisite">Prerequisite</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-daemon">Setup Daemon</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-daemon">Start daemon</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-cli">Setup CLI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#start-cli">Start CLI</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#initialize-daemon">Initialize daemon</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#your-first-bot">Your first bot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-client-key">Setup client key</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#echo-bot">Echo bot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#next-steps">Next Steps</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Olvid
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Olvid.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

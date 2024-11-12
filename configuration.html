@@ -1,0 +1,1111 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>⚙️ Advanced Configuration &#8212; 1.1.0.post1</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!-- 
+    this give us a css class that will be invisible only if js is disabled 
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=26a4bc78f4c0ddb94549" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+    <link rel="stylesheet" type="text/css" href="_static/css/book-theme.css?v=acad2c9c" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=26a4bc78f4c0ddb94549"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549" />
+
+    <script src="_static/documentation_options.js?v=0963413f"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'configuration';</script>
+    <link rel="icon" href="_static/olvid.png"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="CHANGELOG" href="changelog.html" />
+    <link rel="prev" title="Broadcast Bot" href="bots/broadcast.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="1.1.0.post1" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+<aside class="bd-header-announcement" aria-label="Announcement">
+  <div class="bd-header-announcement__content">🚧 Documentation Under Construction! 🚧</div>
+</aside>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/olvid-bots-horizontal.png" class="logo__image only-light" alt="1.1.0.post1 - Home"/>
+    <img src="_static/olvid-bots-horizontal.png" class="logo__image only-dark pst-js-only" alt="1.1.0.post1 - Home"/>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="quickstart.html">🚀 Quickstart</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bots/bots.html">🤖 Bots</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">⚙️ Advanced Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="changelog.html"><svg aria-hidden="true" class="sd-material-icon sd-material-icon-history" height="1.0em" version="4.0.0.63c5cb3" viewbox="0 0 24 24" width="1.0em"><path d="M0 0h24v24H0z" fill="none"></path><path d="M13 3c-4.97 0-9 4.03-9 9H1l3.89 3.89.07.14L9 12H6c0-3.87 3.13-7 7-7s7 3.13 7 7-3.13 7-7 7c-1.93 0-3.68-.79-4.94-2.06l-1.42 1.42C8.27 19.99 10.51 21 13 21c4.97 0 9-4.03 9-9s-4.03-9-9-9zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"></path></svg> CHANGELOG</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart/blob/main//docs/configuration.md?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/olvid-io/Olvid-Bot-Quickstart/issues/new?title=Issue%20on%20page%20%2Fconfiguration.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>⚙️ Advanced Configuration</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bot-in-keycloak">Create a Bot in Keycloak</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enable-bots-in-keycloak">Enable bots in keycloak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-keycloak-bot">Create a new Keycloak Bot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-bot-identity">Create your bot identity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#containerize-bot">Containerize Bot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-with-python-runner">Run with python-runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-with-python-runner">Build with python-runner</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tls">Setup TLS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tls-server-authentication">TLS Server authentication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-server-certificate-and-private-key-using-openssl">Generating Server Certificate and Private Key using OpenSSL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-daemon">Set up daemon</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-bot">Setting up bot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tls-with-client-authentication">TLS with Client authentication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-certificates">Generating Certificates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Set up daemon</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Setting up bot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warnings">Warnings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-automatic-backups">Setup automatic backups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restore-a-backup">Restore a backup</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section id="advanced-configuration">
+<h1>⚙️ Advanced Configuration<a class="headerlink" href="#advanced-configuration" title="Link to this heading">#</a></h1>
+<p>The following best practices should be implemented based on your specific requirements once your bot has been fully developed and is ready for deployment.</p>
+<p>If you come from <a class="reference internal" href="quickstart.html"><span class="std std-doc">🚀 Quickstart</span></a> section you set up a development environment with a daemon running locally with exposed ports, a manually started bot, …
+When your bot is ready to be passed into production there are different steps you will need to implements, depending on your use case.
+You might have a look to the following sections and select which one is relevant for your use case.</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Before proceeding with your reading, please carefully consider the following points.</p>
+<ul class="simple">
+<li><p>The <a class="reference internal" href="index.html#term-Daemon"><span class="xref std std-term">daemon</span></a> is an extremely sensitive entity that can access and/or store the content of your exchanges, attachments, etc. Ensure that its accesses and hosting are properly secured.</p></li>
+<li><p>Traffic between your bot and the daemon is not encrypted if you did not set up <a class="reference internal" href="#setup-tls">TLS</a>. It should never be exposed under any circumstances.</p></li>
+<li><p>Similarly, without <a class="reference internal" href="#setup-tls">TLS</a>, the concept of a <a class="reference internal" href="index.html#term-Client-Key"><span class="xref std std-term">client key</span></a> only serves to compartment usage and cannot be used for authentication purposes in any way.</p></li>
+</ul>
+</div>
+<nav class="contents local" id="contents">
+<ul class="simple">
+<li><p><a class="reference internal" href="#create-a-bot-in-keycloak" id="id3">Create a Bot in Keycloak</a></p>
+<ul>
+<li><p><a class="reference internal" href="#enable-bots-in-keycloak" id="id4">Enable bots in keycloak</a></p></li>
+<li><p><a class="reference internal" href="#create-a-new-keycloak-bot" id="id5">Create a new Keycloak Bot</a></p></li>
+<li><p><a class="reference internal" href="#create-your-bot-identity" id="id6">Create your bot identity</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#containerize-bot" id="id7">Containerize Bot</a></p>
+<ul>
+<li><p><a class="reference internal" href="#run-with-python-runner" id="id8">Run with python-runner</a></p></li>
+<li><p><a class="reference internal" href="#build-with-python-runner" id="id9">Build with python-runner</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#setup-tls" id="id10">Setup TLS</a></p>
+<ul>
+<li><p><a class="reference internal" href="#tls-server-authentication" id="id11">TLS Server authentication</a></p></li>
+<li><p><a class="reference internal" href="#tls-with-client-authentication" id="id12">TLS with Client authentication</a></p></li>
+</ul>
+</li>
+<li><p><a class="reference internal" href="#backups" id="id13">Backups</a></p>
+<ul>
+<li><p><a class="reference internal" href="#warnings" id="id14">Warnings</a></p></li>
+<li><p><a class="reference internal" href="#setup-automatic-backups" id="id15">Setup automatic backups</a></p></li>
+<li><p><a class="reference internal" href="#restore-a-backup" id="id16">Restore a backup</a></p></li>
+</ul>
+</li>
+</ul>
+</nav>
+<hr class="docutils" />
+<section id="create-a-bot-in-keycloak">
+<h2><a class="toc-backref" href="#id3" role="doc-backlink">Create a Bot in Keycloak</a><a class="headerlink" href="#create-a-bot-in-keycloak" title="Link to this heading">#</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This section is only for people with an Olvid Keycloak deployed 😬.</p>
+<p>If you’re unsure about what this means, don’t hesitate to click 👉️ <a class="reference external" href="https://www.olvid.io/faq/olvid-management-console">here</a> 👈️ to learn more about this premium feature !</p>
+</div>
+<p>Setting up a Keycloak Bot enables you to manage it as one of your standard Keycloak users.
+It can be added and removed from groups, and users can interact with the bot through the directory tab in their application.
+This significantly facilitates its integration and utilization at medium and large scales.</p>
+<p>The following steps requires access to the Olvid Management Console within your Keycloak.</p>
+<section id="enable-bots-in-keycloak">
+<h3><a class="toc-backref" href="#id4" role="doc-backlink">Enable bots in keycloak</a><a class="headerlink" href="#enable-bots-in-keycloak" title="Link to this heading">#</a></h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>This step is only necessary for your first bot.</p>
+</div>
+<p>For your realm if you cannot see the <code class="docutils literal notranslate"><span class="pre">Bots</span></code> button in the left sidebar, click on your realm <code class="docutils literal notranslate"><span class="pre">Settings</span></code> button.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Bot button</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="Bot settings button in keycloak administration console" src="_images/keycloak-bot-button.png" />
+</div>
+</div>
+</div>
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Realm Settings button</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="Realm settings button in keycloak administration console" src="_images/keycloak-settings-button.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Then, in your realm settings switch on <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">Bots</span></code> option.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Enable bots</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="Customizable settings section in your realm settings page." src="_images/keycloak-enable-bot-switch.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="create-a-new-keycloak-bot">
+<h3><a class="toc-backref" href="#id5" role="doc-backlink">Create a new Keycloak Bot</a><a class="headerlink" href="#create-a-new-keycloak-bot" title="Link to this heading">#</a></h3>
+<p>Go to your Realm <code class="docutils literal notranslate"><span class="pre">Bots</span></code> page. The button is in the left sidepanel.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Bots button</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="Bot settings button in keycloak administration console" src="_images/keycloak-bot-button.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>When in your Bots Management Page, click on the <code class="docutils literal notranslate"><span class="pre">Create</span> <span class="pre">Bot</span></code> button in the upper-left corner.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Bot Management Page</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="Bots management page in your keycload administration console." src="_images/keycloak-bots-management-page.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This will show you a form to fill with your new bot username and <span class="xref std std-term">identity details</span>.</p>
+<div class="sd-container-fluid sd-sphinx-override sd-mb-4 docutils">
+<div class="sd-row docutils">
+<div class="sd-col sd-d-flex-row docutils">
+<div class="sd-card sd-sphinx-override sd-w-100 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text">Bot Creation Form</p>
+</div>
+<div class="sd-card-body docutils">
+<img alt="the form to create a new bot in your keycloak administration console." src="_images/keycloak-bot-creation-form.png" />
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>When you validated the form a configuration link (starting with <code class="docutils literal notranslate"><span class="pre">https://configuration.olvid.io/#</span></code>) will be shown. Save this link for the next steps.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you lost your configuration link you can reset it with the refresh button in your bots list.</p>
+</div>
+</section>
+<section id="create-your-bot-identity">
+<h3><a class="toc-backref" href="#id6" role="doc-backlink">Create your bot identity</a><a class="headerlink" href="#create-your-bot-identity" title="Link to this heading">#</a></h3>
+<p>When you have your configuration link you will need to use CLI. Click <a class="reference internal" href="#/cli/cli.md"><span class="xref myst">here</span></a>` if you don’t remember how to use it.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Create a new keycloak identity</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Start CLI, and create your new identity using your configuratin link. It will automatically generate a <a class="reference internal" href="index.html#term-Client-Key"><span class="xref std std-term">client key</span></a> to pass to your future bot.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># create your identity</span>
+<span class="m">0</span><span class="w"> </span>&gt;<span class="w"> </span>identity<span class="w"> </span>kc<span class="w"> </span>new<span class="w"> </span>https://configuration.olvid.io/#AAAAAAAAA.....
+<span class="c1"># a client key is automatically created</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Here<span class="w"> </span>is<span class="w"> </span>your<span class="w"> </span>client<span class="w"> </span>key<span class="w"> </span>to<span class="w"> </span>connect<span class="w"> </span>to<span class="w"> </span>daemon<span class="w"> </span>with<span class="w"> </span>this<span class="w"> </span>identity:<span class="w"> </span><span class="m">00000000</span>-0000-0000-0000-000000000000
+<span class="c1"># save your client key and say yes to finish</span>
+identity<span class="w"> </span>creation<span class="w"> </span>&gt;<span class="w"> </span>Did<span class="w"> </span>you<span class="w"> </span>saved<span class="w"> </span>your<span class="w"> </span>client<span class="w"> </span>key<span class="w"> </span>?<span class="w"> </span><span class="o">(</span>y/N<span class="o">)</span>
+&gt;<span class="w"> </span>yes
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> Bind an existing keycloak identity to a keycloak</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">If you already have an identity to your bot you can use the <code class="docutils literal notranslate"><span class="pre">identity</span> <span class="pre">kc</span> <span class="pre">bind</span></code> command to link it to your new Keycloak bot.</p>
+<p class="sd-card-text">It will register your bot on keycloak, and update it’s <span class="xref std std-term">Identity Details</span> to feat the details you just set up in Keycloak.</p>
+<p class="sd-card-text">Start CLI, choose your current identity (probably 1 if you only have one identity on your daemon), then bind it to keycloak using your configuration link</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>identity<span class="w"> </span>current<span class="w"> </span><span class="m">1</span>
+<span class="m">1</span><span class="w"> </span>&gt;<span class="w"> </span>identity<span class="w"> </span>kc<span class="w"> </span><span class="nb">bind</span><span class="w"> </span>https://configuration.olvid.io/#AAAAAAAAA.....
+</pre></div>
+</div>
+</div>
+</details><p>Every Keycloak user can now discover and interact with your bot through their <code class="docutils literal notranslate"><span class="pre">Directory</span></code> within the Olvid application.
+You can also manage your bot from your Administration Console! 🎉</p>
+</section>
+</section>
+<hr class="docutils" />
+<section id="containerize-bot">
+<h2><a class="toc-backref" href="#id7" role="doc-backlink">Containerize Bot</a><a class="headerlink" href="#containerize-bot" title="Link to this heading">#</a></h2>
+<p>When developing and testing your application, it’s usually more convenient to use your local Python installation and a daemon container exposed to your host system.
+However, for a stable environment in production, we recommend to containerize your bot application.</p>
+<p>There are three ways to achieve this:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#run-with-python-runner"><span class="std std-ref">Run with python-runner</span></a>: Use <a class="reference external" href="https://hub.docker.com/r/olvid/bot-python-runner">python-runner</a> docker image to run your code. (fastest)</p></li>
+<li><p><a class="reference internal" href="#build-with-python-runner"><span class="std std-ref">Build with python-runner</span></a>: Build a docker image from <a class="reference external" href="https://hub.docker.com/r/olvid/bot-python-runner">python-runner</a>. (easier to package and distribute)</p></li>
+<li><p>Build your own docker image from scratch. Manually manage your code and dependencies (not detailed here).</p></li>
+</ul>
+<section id="run-with-python-runner">
+<h3><a class="toc-backref" href="#id8" role="doc-backlink">Run with python-runner</a><a class="headerlink" href="#run-with-python-runner" title="Link to this heading">#</a></h3>
+<p>To start with our <a class="reference external" href="https://hub.docker.com/r/olvid/bot-python-runner">python-runner</a> docker image is the fastest way to run you bot code in a container.</p>
+<p>You can find this image on <a class="reference external" href="https://hub.docker.com/r/olvid/bot-python-runner">Docker Hub</a></p>
+<p>This image embeds our Python module and is set up to install your code dependencies and run your bot code.</p>
+<p>We will mount our code as a volume, and the image will manage dependencies and run our bot for us.
+You just need to put your code in a directory named <code class="docutils literal notranslate"><span class="pre">app</span></code>.
+You can put as may as file as you want, but your program will be launched using <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">main.py</span></code> command.</p>
+<p>If you need extra Python dependencies (other than the <code class="docutils literal notranslate"><span class="pre">olvid-bot</span></code> module) add a <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> file next to you <code class="docutils literal notranslate"><span class="pre">main.py</span></code>.
+Command <code class="docutils literal notranslate"><span class="pre">pip3</span> <span class="pre">install</span> <span class="pre">-r</span> <span class="pre">requirements.txt</span></code> will run automatically on container start.</p>
+<p>Here is an example of file structure:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>bot-project
+|── docker-compose.yaml
+|── app
+| |── main.py
+| |── requirements.txt
+</pre></div>
+</div>
+<p>And here is a <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file example, embedding a daemon, your bot and a cli to configure your daemon if necessary.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">daemon</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-daemon</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># TODO generate a random client key with `uuidgen` command and set it here and in the cli service</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_ADMIN_CLIENT_KEY_CLI=SetARandomValue</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/daemon/data</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./backups:/daemon/backups</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+
+<span class="w">  </span><span class="nt">bot</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-python-runner</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># TODO set OLVID_CLIENT_KEY with the client generated when creating identity on daemon</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_CLIENT_KEY=SetMe</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_DAEMON_TARGET=daemon:50051</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># you can remove :ro (read-only file system) if necessary (for example if you store files or database in working directory)</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./app:/app:ro</span>
+<span class="w">    </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daemon</span>
+
+<span class="w">  </span><span class="nt">cli</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-python-runner</span>
+<span class="w">    </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># TODO use the same value as in the daemon OLVID_ADMIN_CLIENT_KEY_CLI</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_ADMIN_CLIENT_KEY=SetARandomValue</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_DAEMON_TARGET=daemon:50051</span>
+<span class="w">    </span><span class="nt">entrypoint</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;olvid-cli&quot;</span>
+<span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">    </span><span class="c1"># share a volume where you can put photos to set up identity profile photos</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./photos:/photos</span>
+<span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">daemon</span>
+<span class="w">    </span><span class="c1"># You may use a profile as the CLI only needs to be started manually</span>
+<span class="w">    </span><span class="nt">profiles</span><span class="p">:</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;cli&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>We do not need to expose daemon ports because every other services will connect to daemon inside docker network.</p>
+</div>
+<p>If this is the first time you launch your daemon you can use <a class="reference internal" href="index.html#term-CLI"><span class="xref std std-term">CLI</span></a> to configure your daemon.</p>
+<p>To launch CLI use:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>cli
+</pre></div>
+</div>
+<p>You will enter CLI interactive mode and you can now follow <a class="reference internal" href="quickstart.html#id1"><span class="std std-ref">Initialize daemon</span></a> procedure to create your bot identity, and retrieve it’s client key.</p>
+<p>When you have your bot client key you can set it as OLVID_CLIENT_KEY value in bot service environment.</p>
+<p>Create a directory named <code class="docutils literal notranslate"><span class="pre">app</span></code> and move your <code class="docutils literal notranslate"><span class="pre">main.py</span></code> and eventually your <code class="docutils literal notranslate"><span class="pre">requirements.txt</span></code> files inside.</p>
+<p>You can now start your bot with:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d<span class="w"> </span>bot
+</pre></div>
+</div>
+<p>If you need to check logs use:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>daemon
+<span class="c1"># or</span>
+docker<span class="w"> </span>compose<span class="w"> </span>logs<span class="w"> </span>-f<span class="w"> </span>bot
+</pre></div>
+</div>
+</section>
+<section id="build-with-python-runner">
+<h3><a class="toc-backref" href="#id9" role="doc-backlink">Build with python-runner</a><a class="headerlink" href="#build-with-python-runner" title="Link to this heading">#</a></h3>
+<p>Building your own docker image allows you to push it to a registry, making it easy to deploy your bot on one or multiple remote machines.</p>
+<p>Here is an example of a <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code>.</p>
+<div class="highlight-Dockerfile notranslate"><div class="highlight"><pre><span></span><span class="c"># build from our python-runner image (image version is the same as installed olvid-bot module)</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">olvid/bot-python-runner:latest</span>
+
+<span class="c"># un-comment to install any python package you need</span>
+<span class="c"># RUN pip3 install python-package</span>
+
+<span class="k">COPY</span><span class="w"> </span>./app<span class="w"> </span>/app
+</pre></div>
+</div>
+<p>To build your image run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>build<span class="w"> </span>-t<span class="w"> </span>my-first-bot<span class="w"> </span>.
+</pre></div>
+</div>
+<p>If you want to test your image locally you can use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command.
+We suppose you have a listening <a class="reference internal" href="index.html#term-Daemon"><span class="xref std std-term">daemon</span></a> and an associated <a class="reference internal" href="index.html#term-Client-Key"><span class="xref std std-term">client key</span></a>.</p>
+<p>Mind to replace my-olvid-client-key and your_host_address with your client key, and your local ip address.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-e<span class="w"> </span><span class="nv">OlVID_CLIENT_KEY</span><span class="o">=</span>my-olvid-client-key<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-e<span class="w"> </span><span class="nv">OLVID_DAEMON_TARGET</span><span class="o">=</span>your_host_address:50051<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>--network<span class="w"> </span>host<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>my-first-bot
+</pre></div>
+</div>
+</section>
+</section>
+<hr class="docutils" />
+<section id="setup-tls">
+<h2><a class="toc-backref" href="#id10" role="doc-backlink">Setup TLS</a><a class="headerlink" href="#setup-tls" title="Link to this heading">#</a></h2>
+<div class="versionadded">
+<p><span class="versionmodified added">Added in version 1.0.1.</span></p>
+</div>
+<p>gRPC natively support TLS. We can distinguish two modes:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#tls-server-authentication"><span class="std std-ref">TLS Server authentication</span></a>: The daemon starts with its own self-signed certificate and associated private key. Clients will use this certificate to encrypt communications with the daemon.</p></li>
+<li><p><a class="reference internal" href="#tls-with-client-authentication"><span class="std std-ref">TLS with Client authentication</span></a>: We create our own Certification Authority (CA) to create certificates.
+We will then create a certificate and a private key for the daemon and one per client.
+Like this, clients can encrypt communications with the daemon, and the daemon can verify that clients have been authorized to connect.</p></li>
+</ul>
+<section id="tls-server-authentication">
+<h3><a class="toc-backref" href="#id11" role="doc-backlink">TLS Server authentication</a><a class="headerlink" href="#tls-server-authentication" title="Link to this heading">#</a></h3>
+<section id="generating-server-certificate-and-private-key-using-openssl">
+<h4>Generating Server Certificate and Private Key using OpenSSL<a class="headerlink" href="#generating-server-certificate-and-private-key-using-openssl" title="Link to this heading">#</a></h4>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-warning sd-text-danger" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg> <strong>Important</strong>: Replace <code class="docutils literal notranslate"><span class="pre">localhost</span></code> with your daemon’s hostname. The hostname is the IP address or domain name that clients will use to establish a connection with the daemon.</p>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-newkey<span class="w"> </span>rsa:4096<span class="w"> </span>-keyout<span class="w"> </span>server.key<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-days<span class="w"> </span><span class="m">36500</span><span class="w"> </span>-out<span class="w"> </span>server.pem<span class="w"> </span>-nodes<span class="w"> </span>-subj<span class="w"> </span><span class="s1">&#39;/CN=localhost&#39;</span>
+</pre></div>
+</div>
+<p>Here is a rewritten version with corrected English and improved clarity:</p>
+</section>
+<section id="set-up-daemon">
+<h4>Set up daemon<a class="headerlink" href="#set-up-daemon" title="Link to this heading">#</a></h4>
+<p>Pass certificate and private key to daemon using environment variables:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DAEMON_CERTIFICATE_FILE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DAEMON_KEY_FILE</span></code></p></li>
+</ul>
+<p>If you use docker, create a credentials directory, containing previously generated certificate and key.
+Add this directory as a read-only volume and use environment variable to enable simple TLS in daemon.</p>
+<p>If you are using Docker, create a credentials directory containing the previously generated certificate and key.
+Mount this directory as a read-only volume and utilize environment variables to enable TLS server authentication in the daemon.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">daemon</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-daemon:latest</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_ADMIN_CLIENT_KEY_CLI=ToSet</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DAEMON_CERTIFICATE_FILE=./credentials/server.pem</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DAEMON_KEY_FILE=./credentials/server.key</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50051:50051</span>
+<span class="w">  </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/daemon/data</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./backups:/daemon/backups</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./credentials:/daemon/credentials:ro</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-up-bot">
+<h4>Setting up bot<a class="headerlink" href="#setting-up-bot" title="Link to this heading">#</a></h4>
+<p>To ensure communication encryption, your bot needs the daemon certificate.</p>
+<p>Let’s assume you have a <code class="docutils literal notranslate"><span class="pre">credentials</span></code> directory containing the previously generated <code class="docutils literal notranslate"><span class="pre">server.pem</span></code> file.
+If you’re running in a Docker environment, you can mount this directory as a read-only volume.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using environment (for docker containers)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Set up environment variables.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_SERVER_CERTIFICATE_PATH</span><span class="o">=</span>./credentials/server.pem
+</pre></div>
+</div>
+<p class="sd-card-text">Now <code class="docutils literal notranslate"><span class="pre">OlvidClient</span></code> sub-classes will automatically enable TLS server authentication on start.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">olvid</span> <span class="kn">import</span> <span class="n">OlvidClient</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Implicit configuration, this automatically load configuration from environment</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">OlvidClient</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">identity_get</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using Files (for dev environment only)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">OlvidClient can search for specific file names to load TLS configurations. For a persistent TLS configuration (compared to using environment variables), you can create symlinks or copy files to specific locations.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ln<span class="w"> </span>-s<span class="w"> </span>./credentials/server.pem<span class="w"> </span>.server.pem
+</pre></div>
+</div>
+<p class="sd-card-text">Now <code class="docutils literal notranslate"><span class="pre">OlvidClient</span></code> sub-classes will automatically enable TLS server authentication on start.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">olvid</span> <span class="kn">import</span> <span class="n">OlvidClient</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># Implicit configuration, this automatically load configuration from environment or .server.pem file</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">OlvidClient</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">identity_get</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using Code</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Create a <cite>GrpcSimpleTlsConfiguration</cite> object and pass it as tls_configuration parameter to an <cite>OlvidClient</cite> subclass constructor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">olvid</span> <span class="kn">import</span> <span class="n">OlvidClient</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">OlvidClient</span><span class="p">(</span><span class="n">tls_configuration</span><span class="o">=</span><span class="n">OlvidClient</span><span class="o">.</span><span class="n">GrpcSimpleTlsConfiguration</span><span class="p">(</span>
+            <span class="n">server_certificate_path</span><span class="o">=</span><span class="s2">&quot;./credentials/server.pem&quot;</span>
+    <span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">identity_get</span><span class="p">())</span>
+
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">())</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+<section id="tls-with-client-authentication">
+<h3><a class="toc-backref" href="#id12" role="doc-backlink">TLS with Client authentication</a><a class="headerlink" href="#tls-with-client-authentication" title="Link to this heading">#</a></h3>
+<section id="generating-certificates">
+<h4>Generating Certificates<a class="headerlink" href="#generating-certificates" title="Link to this heading">#</a></h4>
+<p>We recommend that you create a <code class="docutils literal notranslate"><span class="pre">credentials</span></code> directory and moved in to run every following commands.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To generate CA and server certificate you will need these two openssl templates, download or create them in your current working directory.</p>
+<ul class="simple">
+<li><p><a class="reference download internal" download="" href="_downloads/7800fd274158c28281082978a4d66276/ca-openssl.cnf"><code class="xref download docutils literal notranslate"><span class="pre">ca-openssl.cnf</span></code></a></p></li>
+<li><p><a class="reference download internal" download="" href="_downloads/cd2e02d5b71d75407c6d5802d82bb52c/server-openssl.cnf"><code class="xref download docutils literal notranslate"><span class="pre">server-openssl.cnf</span></code></a></p></li>
+</ul>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Generate our local Certification Authority (CA)</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># You can leave input default values</span>
+openssl<span class="w"> </span>req<span class="w"> </span>-x509<span class="w"> </span>-new<span class="w"> </span>-newkey<span class="w"> </span>rsa:2048<span class="w"> </span>-nodes<span class="w"> </span>-keyout<span class="w"> </span>ca.key<span class="w"> </span>-out<span class="w"> </span>ca.pem<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-config<span class="w"> </span>ca-openssl.cnf<span class="w"> </span>-days<span class="w"> </span><span class="m">36500</span><span class="w"> </span>-extensions<span class="w"> </span>v3_req
+</pre></div>
+</div>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Generate server certificate and key.</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p class="sd-card-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-warning sd-text-danger" viewBox="0 0 24 24" aria-hidden="true"><path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"></path></svg> <strong>Important</strong>: Replace <cite>localhost</cite> with your daemon’s hostname. The hostname is the IP address or domain name that clients will use to establish a connection with the daemon.</p>
+</div>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate server private key</span>
+openssl<span class="w"> </span>genpkey<span class="w"> </span>-algorithm<span class="w"> </span>RSA<span class="w"> </span>-pkeyopt<span class="w"> </span>rsa_keygen_bits:2048<span class="w"> </span>-out<span class="w"> </span>server.key
+<span class="c1"># generate server certificate</span>
+openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>server.key<span class="w"> </span>-out<span class="w"> </span>server.csr<span class="w"> </span>-config<span class="w"> </span>server-openssl.cnf<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-subj<span class="w"> </span><span class="s1">&#39;/CN=localhost&#39;</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-CA<span class="w"> </span>ca.pem<span class="w"> </span>-CAkey<span class="w"> </span>ca.key<span class="w"> </span>-CAcreateserial<span class="w"> </span>-in<span class="w"> </span>server.csr<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-out<span class="w"> </span>server.pem<span class="w"> </span>-extensions<span class="w"> </span>v3_req<span class="w"> </span>-extfile<span class="w"> </span>server-openssl.cnf<span class="w"> </span>-days<span class="w"> </span><span class="m">36500</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="sd-card sd-sphinx-override sd-mb-3 sd-shadow-sm docutils">
+<div class="sd-card-header docutils">
+<p class="sd-card-text"><strong>Generate client certificate and key</strong></p>
+</div>
+<div class="sd-card-body docutils">
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="c1"># generate client key</span>
+openssl<span class="w"> </span>genpkey<span class="w"> </span>-algorithm<span class="w"> </span>RSA<span class="w"> </span>-pkeyopt<span class="w"> </span>rsa_keygen_bits:2048<span class="w"> </span>-out<span class="w"> </span>client.key
+
+<span class="c1"># generate client certificate request (you can leave default value)</span>
+openssl<span class="w"> </span>req<span class="w"> </span>-new<span class="w"> </span>-key<span class="w"> </span>client.key<span class="w"> </span>-out<span class="w"> </span>client.csr
+<span class="c1"># set common name to whatever you want that will identify client</span>
+openssl<span class="w"> </span>x509<span class="w"> </span>-req<span class="w"> </span>-CA<span class="w"> </span>ca.pem<span class="w"> </span>-CAkey<span class="w"> </span>ca.key<span class="w"> </span>-CAcreateserial<span class="w"> </span>-in<span class="w"> </span>client.csr<span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-out<span class="w"> </span>client.pem<span class="w"> </span>-days<span class="w"> </span><span class="m">36500</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id1">
+<h4>Set up daemon<a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
+<p>Daemon will need its certificate, its private key, and the CA to check client are allowed to connect.
+We will use three environment variables to specify file paths:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">DAEMON_CERTIFICATE_FILE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DAEMON_KEY_FILE</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">DAEMON_ROOT_CERTIFICATE_FILE</span></code></p></li>
+</ul>
+<p>Create a <code class="docutils literal notranslate"><span class="pre">credentials</span></code> directory, <code class="docutils literal notranslate"><span class="pre">ca.pem</span></code>, <code class="docutils literal notranslate"><span class="pre">server.pem</span></code> and <code class="docutils literal notranslate"><span class="pre">server.key</span></code> files.</p>
+<p>Add this <code class="docutils literal notranslate"><span class="pre">credentials</span></code> directory as a read-only volume and use environment variable to enable TLS with client authentication in daemon.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">daemon</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-daemon</span>
+<span class="w">  </span><span class="nt">environment</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">OLVID_ADMIN_CLIENT_KEY_CLI=ToSet</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DAEMON_CERTIFICATE_FILE=./credentials/server.pem</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DAEMON_KEY_FILE=./credentials/server.key</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">DAEMON_ROOT_CERTIFICATE_FILE=./credentials/ca.pem</span>
+<span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">50051:50051</span>
+<span class="w">  </span><span class="nt">restart</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">unless-stopped</span>
+<span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/daemon/data</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./backups:/daemon/backups</span>
+<span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./credentials:/daemon/credentials:ro</span>
+</pre></div>
+</div>
+</section>
+<section id="id2">
+<h4>Setting up bot<a class="headerlink" href="#id2" title="Link to this heading">#</a></h4>
+<p>Your bots will need a valid certificate and private key pair, and the CA certificate.
+If you followed Generating Certificates section you will need <code class="docutils literal notranslate"><span class="pre">client.pem</span></code>, <code class="docutils literal notranslate"><span class="pre">client.key</span></code> and <code class="docutils literal notranslate"><span class="pre">ca.pem</span></code> files.</p>
+<p>If you are in docker you can mount <code class="docutils literal notranslate"><span class="pre">credentials</span></code> directory as a read-only volume.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using environment (for docker containers)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Set up three environment variables.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_ROOT_CERTIFICATE_PATH</span><span class="o">=</span>./credientials/ca.pem
+<span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_CERTIFICATE_CHAIN_PATH</span><span class="o">=</span>./credientials/client.pem
+<span class="nb">export</span><span class="w"> </span><span class="nv">OLVID_PRIVATE_KEY_PATH</span><span class="o">=</span>./credientials/client.key
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using files (for development environment)</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">On start OlvidClient can look for some specific files names to load a tls configuration. To have a persistent TLS configuration (compared to environment), you can create symlinks or copy files to specific locations.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ln<span class="w"> </span>-s<span class="w"> </span>./credentials/ca.pem<span class="w"> </span>.ca.pem
+ln<span class="w"> </span>-s<span class="w"> </span>./credentials/client.pem<span class="w"> </span>.client.pem
+ln<span class="w"> </span>-s<span class="w"> </span>./credentials/client.key<span class="w"> </span>.client.key
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="4.0.0.63c5cb3" width="1.0em" height="1.0em" class="sd-material-icon sd-material-icon-settings" viewBox="0 0 24 24" aria-hidden="true"><g><path d="M0,0h24v24H0V0z" fill="none"></path><path d="M19.14,12.94c0.04-0.3,0.06-0.61,0.06-0.94c0-0.32-0.02-0.64-0.07-0.94l2.03-1.58c0.18-0.14,0.23-0.41,0.12-0.61 l-1.92-3.32c-0.12-0.22-0.37-0.29-0.59-0.22l-2.39,0.96c-0.5-0.38-1.03-0.7-1.62-0.94L14.4,2.81c-0.04-0.24-0.24-0.41-0.48-0.41 h-3.84c-0.24,0-0.43,0.17-0.47,0.41L9.25,5.35C8.66,5.59,8.12,5.92,7.63,6.29L5.24,5.33c-0.22-0.08-0.47,0-0.59,0.22L2.74,8.87 C2.62,9.08,2.66,9.34,2.86,9.48l2.03,1.58C4.84,11.36,4.8,11.69,4.8,12s0.02,0.64,0.07,0.94l-2.03,1.58 c-0.18,0.14-0.23,0.41-0.12,0.61l1.92,3.32c0.12,0.22,0.37,0.29,0.59,0.22l2.39-0.96c0.5,0.38,1.03,0.7,1.62,0.94l0.36,2.54 c0.05,0.24,0.24,0.41,0.48,0.41h3.84c0.24,0,0.44-0.17,0.47-0.41l0.36-2.54c0.59-0.24,1.13-0.56,1.62-0.94l2.39,0.96 c0.22,0.08,0.47,0,0.59-0.22l1.92-3.32c0.12-0.22,0.07-0.47-0.12-0.61L19.14,12.94z M12,15.6c-1.98,0-3.6-1.62-3.6-3.6 s1.62-3.6,3.6-3.6s3.6,1.62,3.6,3.6S13.98,15.6,12,15.6z"></path></g></svg> Using Code</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">Create a <cite>GrpcMutualAuthTlsConfiguration</cite> object and pass it as tls_configuration parameter to an <cite>OlvidClient</cite> subclass constructor.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">asyncio</span>
+<span class="kn">from</span> <span class="nn">olvid</span> <span class="kn">import</span> <span class="n">OlvidClient</span>
+
+<span class="k">async</span> <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">client</span> <span class="o">=</span> <span class="n">OlvidClient</span><span class="p">(</span><span class="n">tls_configuration</span><span class="o">=</span><span class="n">OlvidClient</span><span class="o">.</span><span class="n">GrpcMutualAuthTlsConfiguration</span><span class="p">(</span>
+            <span class="n">root_certificate_path</span><span class="o">=</span><span class="s2">&quot;./credentials/ca.pem&quot;</span><span class="p">,</span>
+            <span class="n">certificate_chain_path</span><span class="o">=</span><span class="s2">&quot;./credentials/client.pem&quot;</span><span class="p">,</span>
+            <span class="n">private_key_path</span><span class="o">=</span><span class="s2">&quot;./credentials/client.key&quot;</span>
+    <span class="p">))</span>
+    <span class="nb">print</span><span class="p">(</span><span class="k">await</span> <span class="n">client</span><span class="o">.</span><span class="n">identity_get</span><span class="p">())</span>
+
+<span class="n">asyncio</span><span class="o">.</span><span class="n">set_event_loop</span><span class="p">(</span><span class="n">asyncio</span><span class="o">.</span><span class="n">new_event_loop</span><span class="p">())</span>
+        <span class="n">asyncio</span><span class="o">.</span><span class="n">get_event_loop</span><span class="p">()</span><span class="o">.</span><span class="n">run_until_complete</span><span class="p">(</span><span class="n">main</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</details></section>
+</section>
+</section>
+<hr class="docutils" />
+<section id="backups">
+<h2><a class="toc-backref" href="#id13" role="doc-backlink">Backups</a><a class="headerlink" href="#backups" title="Link to this heading">#</a></h2>
+<p>In your projects, the daemon is a central element and it’s where the data are stored.
+In reality, the data you manipulate (identities, messages, …) is only a tiny part of the data that the daemon manage.
+It’s this invisible data that needs to be saved, as it enables secure exchange with the bot’s contacts.</p>
+<section id="warnings">
+<h3><a class="toc-backref" href="#id14" role="doc-backlink">Warnings</a><a class="headerlink" href="#warnings" title="Link to this heading">#</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Please carefully review the following recommendations and warnings before continuing.</p>
+<ul class="simple">
+<li><p>Backups contain sensitive data equivalent to the daemon’s data directory. It is imperative to handle them with the same rigor and level of security.</p></li>
+<li><p>Backups mentioned here are Olvid backups, which do not contain messages or attachments. These backups allow you to restore your contact book and groups, but not the discussion content.</p></li>
+<li><p>Backups are … backups. You will have to save them in a safe place to be able to re-use them if necessary. In a production environment, the minimal best practice would be to store backups on a separate disk from the rest of the system.</p></li>
+<li><p>Restoring a backup on another daemon and running both simultaneously will lead to unpredictable behavior.</p></li>
+</ul>
+</div>
+</section>
+<section id="setup-automatic-backups">
+<h3><a class="toc-backref" href="#id15" role="doc-backlink">Setup automatic backups</a><a class="headerlink" href="#setup-automatic-backups" title="Link to this heading">#</a></h3>
+<p>Daemon automatically and periodically creates backup. Backups are created every time it’s necessary (your  bot added a contact, joined or left a group, …).
+These backups are stored in <code class="docutils literal notranslate"><span class="pre">/daemon/backups</span></code> directory.</p>
+<p>If you want to persist these backups you need to mount the <code class="docutils literal notranslate"><span class="pre">/daemon/backups</span></code> directory as a volume. Here is an example in a <code class="docutils literal notranslate"><span class="pre">docker-compose.yaml</span></code> file.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>services:
+<span class="w">  </span>daemon:
+<span class="w">    </span>image:<span class="w"> </span>olvid/bot-daemon
+<span class="w">    </span>volumes:
+<span class="w">      </span>-<span class="w"> </span>./data:/daemon/data
+<span class="w">      </span>-<span class="w"> </span>./backups:/daemon/backups
+</pre></div>
+</div>
+<p>Here is an example of <code class="docutils literal notranslate"><span class="pre">/daemon/backups</span></code> directory tree.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">|</span> <span class="n">backups</span>
+<span class="o">|</span>  <span class="o">|</span> <span class="mi">0001</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span> <span class="n">backup</span><span class="o">-</span><span class="mf">1041588600.</span><span class="n">bytes</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span> <span class="n">backup</span><span class="o">-</span><span class="mf">1569233400.</span><span class="n">bytes</span>
+<span class="o">|</span>  <span class="o">|</span>  <span class="o">|</span> <span class="n">backup_seed</span><span class="o">.</span><span class="n">txt</span>
+</pre></div>
+</div>
+<p>Each subdirectory (0001, 0002) must contains it’s own <code class="docutils literal notranslate"><span class="pre">backup_seed.txt</span></code> file daemon will increment and create a new directory.
+This backup seed is necessary to decrypt and restore backups, without the seed your backup is unusable.</p>
+<p>Inside a subdirectory the daemon create and stores up to 10 backup files before rotating them. All these backups are named with their creation epoch timestamp.</p>
+</section>
+<section id="restore-a-backup">
+<h3><a class="toc-backref" href="#id16" role="doc-backlink">Restore a backup</a><a class="headerlink" href="#restore-a-backup" title="Link to this heading">#</a></h3>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Restoring a backup is not a trivial action and should only be done as a last resort.
+You will lose all your stored messages and attachments in the daemon during this process.
+Only elements saved using the storage API will still be available.</p>
+</div>
+<p>To restore a backup you will need a fresh daemon installation.
+If you want to reset an existing daemon delete the <code class="docutils literal notranslate"><span class="pre">data</span></code> folder content (this data is probably mounted as a volume on host system).</p>
+<p>Daemon will also need to access backup files, so we will need another volume.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">services</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">daemon</span><span class="p">:</span>
+<span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">olvid/bot-daemon</span>
+<span class="w">    </span><span class="nt">volumes</span><span class="p">:</span>
+<span class="w">      </span><span class="c1"># data directory must be empty</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./data:/daemon/data</span>
+<span class="w">      </span><span class="c1"># mount your backups directory to let daemon use them</span>
+<span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">./backups:/daemon/backups</span>
+</pre></div>
+</div>
+<p>Then choose the backup to restore in your backups (it’s most of the time the most recent). Save the subdirectory and backup file name for later.</p>
+<p>Now we will need to start daemon in a recovery mode and tell him to restore our backup.
+There are two solutions, we can use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span></code> or <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code>.</p>
+<details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3" open="open">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> docker compose</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">With docker compose you can reuse your current docker-compose.yaml file by verifying beforehand that:</p>
+<ul class="simple">
+<li><p class="sd-card-text">The data volume has been properly cleared.</p></li>
+<li><p class="sd-card-text">Backup directory has been mounted to /daemon/backups.</p></li>
+<li><p class="sd-card-text">All other running services have been stopped using the command docker-compose down.</p></li>
+</ul>
+<p class="sd-card-text">Then you can start backup restoration with the following command.
+Do not forget to replace the backup subdirectory (0001) and filename (backup-1569233400.bytes) with your own values.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>daemon<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-r<span class="w"> </span>backups/0001/backup-1569233400.bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Backup
+</pre></div>
+</div>
+</div>
+</details><details class="sd-sphinx-override sd-dropdown sd-card sd-mb-3">
+<summary class="sd-summary-title sd-card-header">
+<span class="sd-summary-text"><svg version="1.1" width="1.0em" height="1.0em" class="sd-octicon sd-octicon-command-palette" viewBox="0 0 16 16" aria-hidden="true"><path d="m6.354 8.04-4.773 4.773a.75.75 0 1 0 1.061 1.06L7.945 8.57a.75.75 0 0 0 0-1.06L2.642 2.206a.75.75 0 0 0-1.06 1.061L6.353 8.04ZM8.75 11.5a.75.75 0 0 0 0 1.5h5.5a.75.75 0 0 0 0-1.5h-5.5Z"></path></svg> docker run</span><span class="sd-summary-state-marker sd-summary-chevron-right"><svg version="1.1" width="1.5em" height="1.5em" class="sd-octicon sd-octicon-chevron-right" viewBox="0 0 24 24" aria-hidden="true"><path d="M8.72 18.78a.75.75 0 0 1 0-1.06L14.44 12 8.72 6.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018l6.25 6.25a.75.75 0 0 1 0 1.06l-6.25 6.25a.75.75 0 0 1-1.06 0Z"></path></svg></span></summary><div class="sd-summary-content sd-card-body docutils">
+<p class="sd-card-text">First check that your original daemon is not running and the data directory you will mount is empty.</p>
+<p class="sd-card-text">Here is an example of <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">run</span></code> command to adapt to your situation.
+Mind to check the volume location on host system, daemon image version, your backup subdirectory and file name.</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span>./data:/daemon/data<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>-v<span class="w"> </span>./backups:/daemon/backups<span class="w"> </span><span class="se">\</span>
+<span class="w">    </span>olvid/bot-daemon<span class="w"> </span>-r<span class="w"> </span>backups/0001/backup-1569233400.bytes<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>Backup
+</pre></div>
+</div>
+</div>
+</details><p>When you see the message <code class="docutils literal notranslate"><span class="pre">💾</span> <span class="pre">BackupRestoration:</span> <span class="pre">Finished</span> <span class="pre">backup</span> <span class="pre">restoration</span> <span class="pre">process</span></code>, you can stop the daemon (CTRL + C) and start it normally with the command <code class="docutils literal notranslate"><span class="pre">docker-compose</span> <span class="pre">up</span> <span class="pre">-d</span></code>.</p>
+<p>You can now verify using the CLI that the restoration was successful. You should find your identities, contacts, groups, client keys, …</p>
+</section>
+</section>
+</section>
+
+
+                </article>
+              
+
+              
+              
+              
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-bot-in-keycloak">Create a Bot in Keycloak</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#enable-bots-in-keycloak">Enable bots in keycloak</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-new-keycloak-bot">Create a new Keycloak Bot</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-your-bot-identity">Create your bot identity</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#containerize-bot">Containerize Bot</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#run-with-python-runner">Run with python-runner</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#build-with-python-runner">Build with python-runner</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-tls">Setup TLS</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tls-server-authentication">TLS Server authentication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-server-certificate-and-private-key-using-openssl">Generating Server Certificate and Private Key using OpenSSL</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#set-up-daemon">Set up daemon</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#setting-up-bot">Setting up bot</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tls-with-client-authentication">TLS with Client authentication</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#generating-certificates">Generating Certificates</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Set up daemon</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">Setting up bot</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#backups">Backups</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#warnings">Warnings</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#setup-automatic-backups">Setup automatic backups</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#restore-a-backup">Restore a backup</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Olvid
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, Olvid.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=26a4bc78f4c0ddb94549"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=26a4bc78f4c0ddb94549"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
